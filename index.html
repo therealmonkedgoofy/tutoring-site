@@ -14,6 +14,11 @@
       color: #333;
     }
     header {
+      <header>
+  <button onclick="toggleDarkMode()" id="darkModeBtn" style="float: right; margin-top: -2.5rem; background: white; border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer;">Dark Mode</button>
+  <h1>LevelUp Tutoring</h1>
+  <p>Peer-Powered Learning for Grades K–5 | Fun. Focused. Local.</p>
+</header>
       background-color: #4CAF50;
       color: white;
       padding: 1rem;
@@ -56,6 +61,36 @@
     h2 {
       color: #4CAF50;
     }
+    .dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.dark-mode header {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.dark-mode nav {
+  background-color: #222;
+}
+
+.dark-mode nav a {
+  color: #ccc;
+}
+
+.dark-mode nav a:hover {
+  background-color: #444;
+}
+
+.dark-mode .card {
+  background: #1f1f1f;
+  box-shadow: none;
+}
+
+.dark-mode footer {
+  background: #1e1e1e;
+}
   </style>
 </head>
 <body>
@@ -120,5 +155,12 @@
   <footer>
     <p>&copy; 2025 LevelUp Tutoring. All Rights Reserved.</p>
   </footer>
+  <script>
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const btn = document.getElementById("darkModeBtn");
+    btn.innerText = document.body.classList.contains("dark-mode") ? "Light Mode" : "Dark Mode";
+  }
+</script>
 </body>
 </html>
